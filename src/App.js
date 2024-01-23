@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Launch from './components/launch';
 
 //import installed packages and libraries
