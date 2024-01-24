@@ -84,9 +84,9 @@ const Launch = () => {
       >
         <GridItem pl='2'  area={'header'} className="header">
           <Flex className="inner-header">
-              <Box className="logo">
+              <a  href="https://promatecgroup.com" className="logo" >
                   <img src={logo} alt="Promatec Solutions"/>
-              </Box>
+              </a>
           
 
               <Flex className="slogan-container">
