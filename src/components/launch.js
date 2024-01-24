@@ -100,9 +100,8 @@ const Launch = () => {
           <Flex className="main-content">
             {/*<Text className="main-heading">Join us for a week-long journey into the future of security technology.</Text>*/}
             <h1 className="main-heading">Promatec’s Grand Launch: A Revolutionary Leap in Security Technology</h1>
-            <Text className="main-subheading"></Text>
-            <Text className="main-subheading">Don&apos;t miss the grand finale of Promatec&apos;s Launch Event on Friday, 16th February. Witness the unveiling of the latest innovations in security technology, enjoy live entertainment, and network with experts and peers. <br/> This is the climax of a four-day exhibition where you can explore and test Promatec&apos;s cutting-edge products, watch live demos, and learn from industry leaders.</Text>
-            <Text className="main-subheading blue">12<sup>th</sup>-15<sup>th</sup> February (Exhibition) |  8AM-5PM  |  32 Knightsbridge, Newlands, Harare. <br/> 16th February (Launch Day) |  8AM-8PM  |  Same venue. </Text>
+            <Text className="main-subheading">Don&apos;t miss the grand finale of Promatec&apos;s Launch. Witness the unveiling of the latest innovations in security technology, enjoy live entertainment, and network with experts and peers. <br/> This is the climax of a four-day exhibition where you can explore and test Promatec&apos;s cutting-edge products, watch live demos, and learn from industry leaders.</Text>
+            <Text className="main-subheading blue">12<sup>th</sup>-15<sup>th</sup> February (Exhibition) |  8AM-5PM  |  32 Knightsbridge, Newlands, Harare. <br/> 16<sup>th</sup> February (Launch Day) |  8AM-8PM  | 32 Knightsbridge, Newlands, Harare. </Text>
             {/*<Text className="main-subheading">The Promatec Solutions Security Expo is a week-long event that will showcase the latest in security technology. The event will feature live demonstrations, industry leaders, and hands-on experience with state-of-the-art security technology.</Text>*/}
           </Flex>
 
