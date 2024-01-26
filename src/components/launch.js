@@ -20,7 +20,7 @@ import connect from "../assets/icons/cash-connect.png"
 
 //import installed packages and libraries 
 import React, { useEffect, useState } from "react";
-import { Flex, Grid, GridItem, Box, Text } from "@chakra-ui/react";
+import { Flex, Grid, GridItem, Box, Text, Tooltip } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons"
 
@@ -84,10 +84,11 @@ const Launch = () => {
       >
         <GridItem pl='2'  area={'header'} className="header">
           <Flex className="inner-header">
-              <a  href="https://promatecgroup.com" className="logo" >
+              <Tooltip label='Redirect to Home Page' placement='auto-start' defaultIsOpen openDelay={500}>
+                <a  href="https://promatecgroup.com" className="logo" >
                   <img src={logo} alt="Promatec Solutions"/>
-              </a>
-          
+                </a>
+              </Tooltip>
 
               <Flex className="slogan-container">
                   <Text className="slogan">A Secure World <span>Together</span></Text>
