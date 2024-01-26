@@ -85,7 +85,7 @@ const Launch = () => {
         <GridItem pl='2'  area={'header'} className="header">
           <Flex className="inner-header">
               
-              <a  href="https://promatecgroup.com" className="logo" >
+              <a  href="https://promatecgroup.com/home" className="logo" >
                 <Tooltip label='Redirect to Promatec Solutions' hasArrow='true' color={'#23408f'} bg={'#f4a916'}  placement='bottom' defaultIsOpen openDelay={250}>
                   <img src={logo} alt="Promatec Solutions"/>
                 </Tooltip>
