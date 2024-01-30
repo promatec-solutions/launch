@@ -20,14 +20,47 @@ import connect from "../assets/icons/cash-connect.png"
 
 //import installed packages and libraries 
 import React, { useEffect, useState } from "react";
-import { Flex, Grid, GridItem, Box, Text, Tooltip } from "@chakra-ui/react";
+import { Flex, Grid, GridItem, Box, Text, Tooltip, useDisclosure, FormControl, FormLabel, Input, Stack, ButtonGroup, Button, Textarea, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Alert, AlertIcon, AlertTitle, AlertDescription, CloseButton } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons"
+import { useForm, ValidationError } from "@formspree/react"
 
 const Launch = () => {
   const [picWidth, setWidth] = useState("45%");
-  
+  const { onOpen, onClose, isOpen } = useDisclosure()
+  const initialRef = React.useRef(null)
+  const finalRef = React.useRef(null)
+  const [state, handleSubmit] = useForm("moqgjogn")  
 
+  {/*
+  const {
+    isOpen: isVisible,
+    onClose :closeAlert,
+    onOpen : openAlert,
+  } = useDisclosure()
+
+  const showAlert = () => {
+    return (
+      <>
+        <Alert status='success'>
+          <AlertIcon />
+          <Box>
+            <AlertTitle>Success!</AlertTitle>
+            <AlertDescription>
+              Thanks for reserving your spot. We look forward to seeing you at the event.
+            </AlertDescription>
+          </Box>
+          <CloseButton
+            alignSelf='flex-start'
+            position='relative'
+            right={-1}
+            top={-1}
+            onClick={closeAlert}
+          />
+        </Alert>
+      </>
+    )
+  }*/}
   useEffect(()=>{
     window.addEventListener('resize',()=>{
       if (window.outerWidth <=768){
@@ -37,6 +70,14 @@ const Launch = () => {
       }
     })
   },[])
+
+  useEffect(()=>{
+    if (state.succeeded){
+      //showAlert()
+      onClose()
+    }
+  },[state])
+
 
   // Set the date we're counting down to
   const countDownDate = new Date("Feb 12, 2024 08:00:00");
@@ -139,8 +180,80 @@ const Launch = () => {
           <Flex className="register">
             <Text className="register-text">RSVP Now!</Text>
             <Flex className="rsvp">
-              <a href="+263777956346">{phoneIcon}</a>
-              <a href="mailto:marketing@promatecgroup.com">{emailIcon}</a>
+              <Button><a href="tel:+263777956346">{phoneIcon}</a></Button>
+
+              <Button onClick={onOpen}>{emailIcon}</Button>
+              <Modal
+                initialFocusRef={initialRef}
+                finalFocusRef={finalRef}
+                isOpen={isOpen}
+                onClose={onClose}
+              >
+                <ModalOverlay />
+                <ModalContent>
+                  <ModalHeader>Promatec Zimbabwe Launch RSVP</ModalHeader>
+                  <ModalCloseButton />
+                  <form onSubmit={handleSubmit} >
+
+                    <ModalBody pb={6}> 
+                      <Flex margin={"8px 0"}>
+                        <FormControl>
+                          <FormLabel htmlFor="Fullname">Full Name</FormLabel>
+                          <Input name="Fullname" type="text" placeholder='John Doe' />
+                        </FormControl>
+                        <ValidationError prefix="Fullname" field="Fullname" errors={state.errors} />
+                        
+                        <FormControl>
+                          <FormLabel htmlFor="Email">Email</FormLabel>
+                          <Input name="Email"  type="email" placeholder='email@example.com' />
+                        </FormControl>
+                        <ValidationError prefix="Email" field="Email" errors={state.errors} />
+                      </Flex>
+
+                      <Flex margin={"8px 0"}>
+                        <FormControl>
+                          <FormLabel htmlFor="Phone">Phone</FormLabel>
+                          <Input name="Phone" type="text" placeholder='+2631233456789' />
+                        </FormControl>
+                        <ValidationError prefix="Phone" field="Phone" errors={state.errors} />
+                      </Flex>
+
+                      <Flex margin={"8px 0"}>
+                        <FormControl>
+                          <FormLabel htmlFor="Company">Company</FormLabel>
+                          <Input name="Company" type="text" placeholder='Company Name' />
+                        </FormControl>
+                        <ValidationError prefix="Company" field="Company" errors={state.errors} />
+
+                        <FormControl>
+                          <FormLabel htmlFor="Position">Position/Role</FormLabel>
+                          <Input name="Position" type="text" placeholder='Position' />
+                        </FormControl>
+                        <ValidationError prefix="Position" field="Position" errors={state.errors} />
+                      </Flex>
+
+                      <Flex margin={"8px 0"}>
+                        <FormControl>
+                          <FormLabel htmlFor="Dietary Requirements">Special Dietary Requirements</FormLabel>
+                          <Textarea name="Dietary Requirements" placeholder="Special Dietary Requirements" />  
+                        </FormControl>
+                        <ValidationError prefix="Dietary Requirements" field="Dietary Requirements" errors={state.errors} />
+                      </Flex>
+
+            
+                      <Input type="hidden" name="_subject" value="Promatec Zimbabwe Launch RSVP" />
+                      <Input type="hidden" name="_next" value="https://promatecgroup.com/" />
+                    </ModalBody>
+
+                    <ModalFooter>
+                      <Button type="submit" colorScheme='blue' mr={3}>
+                        Submit
+                      </Button>
+                      <Button onClick={onClose}>Cancel</Button>
+                    </ModalFooter>
+                  </form>
+                </ModalContent>
+              </Modal>
             </Flex>
           </Flex>
 
