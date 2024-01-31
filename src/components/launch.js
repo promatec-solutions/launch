@@ -195,51 +195,58 @@ const Launch = () => {
                   <ModalCloseButton />
                   <form onSubmit={handleSubmit} >
 
-                    <ModalBody pb={6}> 
-                      <Flex margin={"8px 0"}>
-                        <FormControl>
+                    <ModalBody pb={6} > 
+                      <Flex margin={"16px 0"}>
+                        <FormControl mr={"4px"}>
+                          <FormLabel htmlFor="Title">Title</FormLabel>
+                          <Input name="Title"  type="text" placeholder='Title' />
+                        </FormControl>
+                        <ValidationError prefix="Title" field="Title" errors={state.errors} />
+
+
+                        <FormControl ml={"4px"}>
                           <FormLabel htmlFor="Fullname">Full Name</FormLabel>
                           <Input name="Fullname" type="text" placeholder='John Doe' />
                         </FormControl>
                         <ValidationError prefix="Fullname" field="Fullname" errors={state.errors} />
                         
-                        <FormControl>
+                      </Flex>
+
+                      <Flex margin={"16px 0"}>
+                        <FormControl mr={"4px"}>
+                          <FormLabel htmlFor="Phone">Phone</FormLabel>
+                          <Input name="Phone" type="text" placeholder='+2631233456789' />
+                        </FormControl>
+                        <ValidationError prefix="Phone" field="Phone" errors={state.errors} />
+
+                        <FormControl ml={"4px"}>
                           <FormLabel htmlFor="Email">Email</FormLabel>
                           <Input name="Email"  type="email" placeholder='email@example.com' />
                         </FormControl>
                         <ValidationError prefix="Email" field="Email" errors={state.errors} />
                       </Flex>
 
-                      <Flex margin={"8px 0"}>
-                        <FormControl>
-                          <FormLabel htmlFor="Phone">Phone</FormLabel>
-                          <Input name="Phone" type="text" placeholder='+2631233456789' />
-                        </FormControl>
-                        <ValidationError prefix="Phone" field="Phone" errors={state.errors} />
-                      </Flex>
-
-                      <Flex margin={"8px 0"}>
-                        <FormControl>
+                      <Flex margin={"16px 0"}>
+                        <FormControl mr={"4px"}>
                           <FormLabel htmlFor="Company">Company</FormLabel>
                           <Input name="Company" type="text" placeholder='Company Name' />
                         </FormControl>
                         <ValidationError prefix="Company" field="Company" errors={state.errors} />
 
-                        <FormControl>
+                        <FormControl ml={"4px"}>
                           <FormLabel htmlFor="Position">Position/Role</FormLabel>
                           <Input name="Position" type="text" placeholder='Position' />
                         </FormControl>
                         <ValidationError prefix="Position" field="Position" errors={state.errors} />
                       </Flex>
 
-                      <Flex margin={"8px 0"}>
+                      <Flex margin={"16px 0"}>
                         <FormControl>
                           <FormLabel htmlFor="Dietary Requirements">Special Dietary Requirements</FormLabel>
                           <Textarea name="Dietary Requirements" placeholder="Special Dietary Requirements" />  
                         </FormControl>
                         <ValidationError prefix="Dietary Requirements" field="Dietary Requirements" errors={state.errors} />
                       </Flex>
-
             
                       <Input type="hidden" name="_subject" value="Promatec Zimbabwe Launch RSVP" />
                       <Input type="hidden" name="_next" value="https://promatecgroup.com/" />
