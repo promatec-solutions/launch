@@ -17,6 +17,7 @@ import isitaki from "../assets/icons/isitaki.png"
 import jablotron from "../assets/icons/jablotron_logo.svg"
 import turnstar from "../assets/icons/turnstar-logo-header.png"
 import connect from "../assets/icons/cash-connect.png"
+import boomgate from "../assets/icons/boomgateSystems.svg"
 
 //import installed packages and libraries 
 import React, { useEffect, useState } from "react";
@@ -277,6 +278,12 @@ const Launch = () => {
           <section className="logo-slider">
             <Box className="slide-track">
                 <Box className="logo-slide">
+                    <img src={boomgate} alt="Boomgate Systems"/>
+                </Box>
+                <Box className="logo-slide">
+                    <img src={connect} alt="Cash Connect"/>
+                </Box>
+                <Box className="logo-slide">
                     <img src={cathexis} alt="Cathexis logo"/>
                 </Box>
                 <Box className="logo-slide">
@@ -297,9 +304,7 @@ const Launch = () => {
                 <Box className="logo-slide">
                     <img src={turnstar} alt="Turnstar"/>
                 </Box>
-                <Box className="logo-slide">
-                    <img src={connect} alt="Cash Connect"/>
-                </Box>
+                
             </Box>
           </section>
         </GridItem>
