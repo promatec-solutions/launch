@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.fea53c16.css",
-    "main.js": "/static/js/main.b86e193c.js",
+    "main.js": "/static/js/main.4e0d0354.js",
     "static/media/cctv-4.jpeg": "/static/media/cctv-4.ee8b75fd083f66a30f72.jpeg",
     "static/media/cctv-2.jpeg": "/static/media/cctv-2.c8524a02d691ee71e667.jpeg",
     "static/media/cctv-3.jpeg": "/static/media/cctv-3.b76ba80129a8ad60dd21.jpeg",
@@ -10,6 +10,7 @@
     "static/media/isitaki.png": "/static/media/isitaki.a3e96a103dd82e119f82.png",
     "static/media/security.jpg": "/static/media/security.6531c0c161a784466684.jpg",
     "static/media/cctv-5.jpg": "/static/media/cctv-5.3fd9db73ba49c2e266c9.jpg",
+    "static/media/boomgateSystems.svg": "/static/media/boomgateSystems.28f88a87afc5654e679b180b9feec2eb.svg",
     "static/media/GYTlogo1.png": "/static/media/GYTlogo1.ae17d7cf2e27dae34767.png",
     "static/media/jablotron_logo.svg": "/static/media/jablotron_logo.f1664b27fd2b2bbd5375faeae1df0580.svg",
     "static/media/impro_logo.svg": "/static/media/impro_logo.9a5df1e2a6b4bf5bf4af84b3e9fa6bc7.svg",
@@ -19,10 +20,10 @@
     "static/media/Cathexis-logo.svg": "/static/media/Cathexis-logo.8aca6a37967a7c63e663d4380dc85991.svg",
     "index.html": "/index.html",
     "main.fea53c16.css.map": "/static/css/main.fea53c16.css.map",
-    "main.b86e193c.js.map": "/static/js/main.b86e193c.js.map"
+    "main.4e0d0354.js.map": "/static/js/main.4e0d0354.js.map"
   },
   "entrypoints": [
     "static/css/main.fea53c16.css",
-    "static/js/main.b86e193c.js"
+    "static/js/main.4e0d0354.js"
   ]
 }
