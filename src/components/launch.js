@@ -301,10 +301,6 @@ const Launch = () => {
                 <Box className="logo-slide">
                     <img src={jablotron} alt="Jablotron Logo"/>
                 </Box>
-                <Box className="logo-slide">
-                    <img src={turnstar} alt="Turnstar"/>
-                </Box>
-                
             </Box>
           </section>
         </GridItem>
